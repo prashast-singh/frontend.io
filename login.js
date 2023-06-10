@@ -9,9 +9,9 @@ function login(e){
         password: form.children[3].value,
     }
 
-    axios.post('http://ec2-54-91-147-182.compute-1.amazonaws.com:4000/login',{myObj})
+    axios.post('https://ec2-54-91-147-182.compute-1.amazonaws.com:4000/login',{myObj})
             .then(e=> {
-
+                 alert("success")
                if(e.data.e==="/expenseview"){
                 localStorage.setItem('token', e.data.token)
                 localStorage.setItem('premiumUser', e.data.premiumUser)
